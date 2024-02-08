@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZOSTAŃ WALENTYNKA</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    #container {
+        text-align: center;
+    }
+    #heart {
+        width: 300px; /* Powiększone serce */
+        height: auto;
+    }
+    #buttons {
+        margin-top: 20px;
+    }
+    .button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    #yes {
+        background-color: green;
+        color: white;
+    }
+    #no {
+        background-color: red;
+        color: white;
+    }
+    #result {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <img id="heart" src="heart.png" alt="Serce">
+    <div id="buttons">
+        <button class="button" id="yes">Tak</button>
+        <button class="button" id="no">Nie</button>
+    </div>
+    <div id="result" style="display: none;"></div>
+	<p> Zostaniesz moja walentynka młoda??? (obserwuje cie) </p>    
+<p>Tak czy nie??    Tak czy nie??    Tak czy nie??    Tak czy nie??    Tak czy nie??    Tak czy nie??    Tak czy nie??    Tak czy nie??    </p>
+</div>
+
+<script>
+    const yesButton = document.getElementById('yes');
+    const noButton = document.getElementById('no');
+    const resultDiv = document.getElementById('result');
+
+    yesButton.addEventListener('click', function() {
+        resultDiv.innerHTML = '<img src="smiling_bear.gif" alt="Usmiechniety miś"><br>To ja teraz :D';
+        resultDiv.style.display = 'block';
+        yesButton.style.width = '60%';
+        noButton.style.display = 'none';
+    });
+
+    noButton.addEventListener('click', function() {
+        resultDiv.innerHTML = 'Nie? Przemyśl to >:(';
+        resultDiv.style.display = 'block';
+    });
+</script>
+</body>
+</html>
+
